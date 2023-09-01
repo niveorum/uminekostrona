@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.Umineko-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  max-height: 500px;
+  margin: 0 auto;
+  border-radius: 30px
+}
