@@ -4,23 +4,22 @@ import { Grid } from '@mui/material';
 import Leftbar from './Leftbar';
 import Feed from './Feed'
 
-const style_item = {
+const styleItem = {
     paddingTop: 10,
     flexDirection: 'column',
-    alignItems: {xs:'flex-start', sm:'center'}
+    alignItems: {xs:'flex-start', sm:'center'},
 };
 
-const style_hidden = {
+const styleHidden = {
     display: {xs:'none', sm:'inline'}
 }
-
 
 export const Home: FC = () => {
     return(
     <Grid container>
-        <Grid container md={3} xs={2} sx={style_item } ><Leftbar/></Grid>
-        <Grid item md={5} xs={9} sx={style_item }><Feed/></Grid>
-        <Grid item md={4} xs={1} sx={{...style_item, ...style_hidden}} position="sticky"><div/></Grid>
+        <Grid container md={3} xs={2} sx={styleItem } ><Leftbar/></Grid>
+        <Grid item md={5} xs={9} sx={{...styleItem} }><Feed/></Grid>
+        <Grid item md={4} xs={1} sx={{...styleItem, ...styleHidden}} position="sticky"><div/></Grid>
     </Grid>
     );
 }
