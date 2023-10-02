@@ -1,28 +1,21 @@
 import React, { FC } from 'react';
-import { Link} from 'react-router-dom';
-import { Typography, Grid, Box,} from '@mui/material';
+import { Grid, Box,} from '@mui/material';
 import LeftbarButton from './LeftbarButton';
-
-
-const styleBox = {
-    borderRadius: 2,
-    border: 1,
-    borderColor: 'primary.main',
-    padding: 5,
-}
+import {Brush, Newspaper, VideogameAsset} from '@mui/icons-material';
 
 const Leftbar: FC = () => {
 
     return(
-    <Box m={1}>
-    <Grid item flexDirection='column' position="fixed">
-        <Grid container flexDirection='column'>
-            <LeftbarButton link = {'/dupa'} title = {'chuj'} icon = {<div>pizda</div>}/>
-        </Grid>
-    </Grid>
-    </Box>
+        <Box m={1}>
+            <Grid item flexDirection='column' position="fixed">
+                <Grid container flexDirection='column'>
+                    <LeftbarButton link = {'/news'} title = {'Newsy'} icon = {<Newspaper/>}/>
+                    <LeftbarButton link = {'/games'} title = {'Visual Novelki'} icon = {<VideogameAsset/>}/>
+                    <LeftbarButton link = {'/gallery'} title = {'Galeria'} icon = {<Brush/>}/>
+                    <LeftbarButton link = {'/discord'} title = {'Discord'} icon = {<img width={24} height={24} src="/discord-v2.svg" alt="My SVG" />}/>
+                </Grid>
+            </Grid>
+        </Box>
     );
 }
 export default Leftbar;
-
-// DRY - don't repeat yourself

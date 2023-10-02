@@ -11,7 +11,7 @@ const styleHidden = {
 const styleItem = {
     display: "flex",
     color: 'primary.main',
-    //justifyContent:"space-between",
+    fontWeight: 'bold',
     direction: 'row',
     textAlign: 'center',
     alignItems:'center',
@@ -22,13 +22,13 @@ const styleItem = {
     whiteSpace: 'nowrap',
     padding: 1,
     lineHeight: 0,
-    border: 2,
+    border: 1,
     borderColor: '#00000000',
     borderRadius: 8,
     backgroundColor: "#00000080",
     '&:hover': {
         borderRadius: 8,
-        border: 2,
+        border: 1,
         borderColor: 'primary.main',
      },
 }
@@ -50,7 +50,5 @@ const LeftbarButton: FC <LeftbarButtonProps> = (props) => {
                     </Grid>
                 </Grid>
             </Link>)
-
-    
 }
 export default LeftbarButton

@@ -6,7 +6,12 @@ import { Outlet } from 'react-router';
 const styleFeed = {
     backgroundColor: "#00000080",
     height: '100%',
-    overflow: 'visible'
+    overflow: 'visible',
+    padding: "20px",
+    color: "white",
+    img: {
+        maxWidth: '100%'
+    }
 }
 
 const Feed: FC = () => {
