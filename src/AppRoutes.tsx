@@ -11,8 +11,10 @@ export const AppRoutes: FC = () => {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}>         
-          <Route path='dupa' element={<div>:)</div>}/>
-          <Route path='cyce' element={<DiscordLink/>}/>
+          <Route path='news' element={<div>Strona w przygotowaniu :3</div>}/>
+          <Route path='games' element={<div>Umineko, Higurashi</div>}/>
+          <Route path='gallery' element={<img src='/cycebeatrice.jpg'/>}/>
+          <Route path='discord' element={<DiscordLink/>}/>
         </Route>
       </Routes>
     </div>
