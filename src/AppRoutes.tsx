@@ -3,6 +3,7 @@ import { Routes, Route, Navigate} from 'react-router-dom'
 import Navbar from './layout/Navbar';
 import Home from './layout/Home';
 import DiscordLink from './components/DiscordLink';
+import Post from './components/Post';
 
 
 export const AppRoutes: FC = () => {  
@@ -11,7 +12,7 @@ export const AppRoutes: FC = () => {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}>         
-          <Route path='news' element={<div>Strona w przygotowaniu :3</div>}/>
+          <Route path='' element={<Post title={'Witamy na stronie!'} content={'Bardzo serdecznie witam fanów 07th Expansion! ~Snowy'} date={new Date('October 3, 2023')}/>}/>
           <Route path='games' element={<div>Umineko, Higurashi</div>}/>
           <Route path='gallery' element={<img src='/cycebeatrice.jpg'/>}/>
           <Route path='discord' element={<DiscordLink/>}/>

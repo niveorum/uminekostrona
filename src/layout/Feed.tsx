@@ -7,7 +7,7 @@ const styleFeed = {
     backgroundColor: "#00000080",
     height: '100%',
     overflow: 'visible',
-    padding: "20px",
+    padding: "2%",
     color: "white",
     img: {
         maxWidth: '100%',
