@@ -10,7 +10,8 @@ const styleFeed = {
     padding: "20px",
     color: "white",
     img: {
-        maxWidth: '100%'
+        maxWidth: '100%',
+        maxHeight: '100%'
     }
 }
 
@@ -19,9 +20,7 @@ const Feed: FC = () => {
     return(
 
     <Grid container sx = {{...styleFeed}} alignItems="center" direction="column">
-            <Grid item container direction="column" spacing={1}>
-                <Outlet/>
-            </Grid>
+        <Outlet/>
     </Grid>);
 }
 export default Feed;
