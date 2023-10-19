@@ -1,6 +1,7 @@
 import { Box, Grid } from '@mui/material';
 import React, { FC, ReactElement } from 'react';
 import VisualNovelItem from './VisualNovelItem';
+import { visualNovelList } from '../pageContent/VisualNovel';
 
 const styleItem = {
     overflowY: "scroll",
@@ -23,36 +24,18 @@ const styleItem = {
     }
 }
 
-const visualNovelList = [{
-    title:"umineko0",
-    content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-    imageFileName:"umi.png"
-},
-{
-    title:"umineko1",
-    content:"ahaha.wav",
-    imageFileName:"umi.png"
-},
-{
-    title:"umineko2",
-    content:"ahaha.wav",
-    imageFileName:"umi.png"
-},
-{
-    title:"umineko3",
-    content:"ahaha.wav",
-    imageFileName:"umi.png"
-}
-]
-
 const VisualNovelGrid: FC = () => {
     return (
         <Box sx={styleItem}>
             <Grid container spacing={2}>
                 {
                     visualNovelList.map((item) => 
-                        <Grid item xs={12} md={6}>
-                            <VisualNovelItem title={item.title} content={item.content} imageFileName={item.imageFileName}/>
+                        <Grid item key={item.title} xs={12} md={6}>
+                            <VisualNovelItem 
+                                title={item.title} 
+                                displayTitle={item.displayTitle} 
+                                summary={item.summary}
+                                imageFileName={item.imageFileName}/>
                         </Grid>
                     )
                 }

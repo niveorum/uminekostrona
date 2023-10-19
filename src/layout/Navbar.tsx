@@ -14,7 +14,7 @@ const Navbar: FC = () => {
     <Grid container position="fixed" zIndex={10000}>
         <Grid item xs={12} position="sticky">
             <Toolbar sx={{...style_toolbar}}>
-                <img width={215} style={{margin: 'auto'}} src={"umilogo.png"}/>
+                <img width={215} style={{margin: 'auto'}} src={"/umilogo.png"}/>
             </Toolbar>
         </Grid>
     </Grid>

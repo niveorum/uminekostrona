@@ -1,9 +1,10 @@
 import React, { FC, ReactElement } from 'react';
-import { Typography, Grid, Box, Icon, Divider,} from '@mui/material';
+import { Typography, Grid, Box, Icon, Divider} from '@mui/material';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
+import { Link } from 'react-router-dom';
 
 const styleItem = {
   backgroundColor: "#00000075",
@@ -24,7 +25,7 @@ const VisualNovelItemTitle: FC <VisualNovelItemProp> = (props) => {
       <Grid container justifyContent="center">
           <Grid item>
               <Typography variant="h5">
-                  {props.title}
+                  {props.displayTitle}
               </Typography>
           </Grid>
       </Grid>
@@ -33,28 +34,31 @@ const VisualNovelItemTitle: FC <VisualNovelItemProp> = (props) => {
 
 interface VisualNovelItemProp{
   title:string;
-  content:string;
+  displayTitle:string;
+  summary:string;
   imageFileName:string
 }
 
 const VisualNovelItem: FC <VisualNovelItemProp> = (props) => {
   return (
-    <Card sx={styleItem}>
-      <CardHeader
-        title={<VisualNovelItemTitle {...props}/>}
-      />
-      <CardMedia
-        component="img"
-        height="194"
-        width="150"
-        image={props.imageFileName}
-      />
-      <CardContent>
-        <Typography >
-            {props.content}
-        </Typography>
-      </CardContent>
-    </Card>
+    <Link to={props.title} style={{ textDecoration: 'none' }}>
+      <Card sx={styleItem}>
+        <CardHeader
+          title={<VisualNovelItemTitle {...props}/>}
+        />
+        <CardMedia
+          component="img"
+          height="194"
+          width="150"
+          image={props.imageFileName}
+        />
+        <CardContent>
+          <Typography >
+              {props.summary}
+          </Typography>
+        </CardContent>
+      </Card>
+    </Link>
   );
 }
 export default VisualNovelItem
