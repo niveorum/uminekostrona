@@ -1,20 +1,9 @@
 import React, { FC, ReactElement } from 'react';
-import { Link} from 'react-router-dom';
 import { Typography, Grid, Box, Icon, Divider,} from '@mui/material';
-import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
-import IconButton, { IconButtonProps } from '@mui/material/IconButton';
-import { red } from '@mui/material/colors';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import Markdown from 'react-markdown';
 
 const styleItem = {
     backgroundColor: "#00000000",
@@ -32,7 +21,7 @@ const PostTitle: FC <PostProps> = (props) => {
             </Grid>
             <Grid item xs={0}>
                 <Typography>
-                    {props.date.toDateString()}
+                    {props.date?.toDateString()}
                 </Typography>
             </Grid>
         </Grid>
@@ -41,7 +30,7 @@ const PostTitle: FC <PostProps> = (props) => {
 interface PostProps{
     title:string;
     content:string;
-    date:Date;
+    date?:Date;
 }
 
 const Post: FC <PostProps> = (props) => {
@@ -57,9 +46,9 @@ const Post: FC <PostProps> = (props) => {
             alt="Paella dish"
           /> */}
           <CardContent>
-            <Typography >
+            <Markdown>
                 {props.content}
-            </Typography>
+            </Markdown>
           </CardContent>
           <Divider sx={{backgroundColor:"#ffffff"}}/>
         </Card>
