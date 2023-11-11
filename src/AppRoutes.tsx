@@ -6,6 +6,7 @@ import DiscordLink from './components/DiscordLink';
 import Post from './components/Post';
 import VisualNovelGrid from './components/VisualNovelGrid';
 import VisualNovelPost from './components/VisualNovelPost';
+import FooterLayout from './layout/FooterLayout';
 
 
 export const AppRoutes: FC = () => {  
@@ -27,6 +28,7 @@ export const AppRoutes: FC = () => {
             <Route path='discord' element={<DiscordLink/>}/>
           </Route>
         </Routes>
+        <FooterLayout/>
       </BrowserRouter>
     </div>
   );
