@@ -1,5 +1,5 @@
 import { Box, Grid } from '@mui/material';
-import React, { FC, ReactElement } from 'react';
+import { FC } from 'react';
 import VisualNovelItem from './VisualNovelItem';
 import { visualNovelList } from '../pageContent/VisualNovel';
 
@@ -9,7 +9,6 @@ const styleItem = {
     width: "100%",
     padding: "4px",
     
-    // scrollbarWidth: 'thin',
     '&::-webkit-scrollbar': {
       width: '0.6em',
     },

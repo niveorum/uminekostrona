@@ -1,5 +1,5 @@
-import React, { FC, ReactElement } from 'react';
-import { Typography, Grid, Box, Icon, Divider} from '@mui/material';
+import { FC } from 'react';
+import { Typography, Grid } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
