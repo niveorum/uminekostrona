@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Grid, Box } from '@mui/material';
 import LeftbarButton from './LeftbarButton';
 import { Brush, Newspaper, VideogameAsset } from '@mui/icons-material';

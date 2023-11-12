@@ -1,5 +1,5 @@
-import React, { FC, ReactElement } from 'react';
-import { Typography, Grid, Box, Icon, Divider,} from '@mui/material';
+import { FC } from 'react';
+import { Typography, Grid, Divider,} from '@mui/material';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
@@ -39,12 +39,6 @@ const Post: FC <PostProps> = (props) => {
           <CardHeader
             title={<PostTitle {...props}/>}
           />
-          {/* <CardMedia
-            component="img"
-            height="194"
-            image="/static/images/cards/paella.jpg"
-            alt="Paella dish"
-          /> */}
           <CardContent>
             <Markdown>
                 {props.content}

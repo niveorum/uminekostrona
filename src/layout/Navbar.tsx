@@ -1,5 +1,5 @@
-import React, { FC} from 'react';
-import { AppBar, Toolbar, Typography, Grid } from '@mui/material'
+import { FC } from 'react';
+import { Toolbar, Grid } from '@mui/material'
 
 const style_toolbar = {
     backgroundColor: "#00000000",

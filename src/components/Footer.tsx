@@ -1,78 +1,61 @@
 import React from "react";
-import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
-import { Facebook, Instagram, Twitter } from "@mui/icons-material";
-import { Box } from "@mui/material";
+import { Box, Divider } from "@mui/material";
+import { faDiscord, faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { linkDiscord, linkGithub, linkTwitter } from "../Config";
+
 
 const Footer: React.FC = () => {
   return (
     <Box
-      component="footer"
       sx={{
-        backgroundColor: (theme) =>
-          theme.palette.mode === "light"
-            ? theme.palette.grey[200]
-            : theme.palette.grey[800],
-        p: 6,
+        color: "white",
+        minHeight: '8vh',
+        width: '100%',
       }}
     >
-      <Container maxWidth="lg">
-        <Grid container spacing={5}>
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" color="text.primary" gutterBottom>
-              About Us
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              We are XYZ company, dedicated to providing the best service to our
-              customers.
+      <Divider sx={{backgroundColor:"#ffffff"}}/> 
+        <Grid container>
+        <Grid item md={3}></Grid>
+          <Grid item xs={12} md={3}>
+            <Typography variant="h6" align="center">
+              <img width={215} style={{margin: 'auto'}} src={"/umilogo.png"}/>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" color="text.primary" gutterBottom>
-              Contact Us
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              123 Main Street, Anytown, USA
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Email: info@example.com
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Phone: +1 234 567 8901
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" color="text.primary" gutterBottom>
+          <Grid item xs={12} md={3}>
+            <Typography variant="h6" align="center">
               Follow Us
+              <div>
+              <Link href={linkGithub} color="inherit">
+                <FontAwesomeIcon icon={faGithub} />
+              </Link>
+              <Link
+                href={linkTwitter}
+                color="inherit"
+                sx={{ pl: 1, pr: 1 }}
+              >
+                <FontAwesomeIcon icon={faTwitter} />
+              </Link>
+              <Link href={linkDiscord} color="inherit">
+                <FontAwesomeIcon icon={faDiscord} />
+              </Link>
+              </div>
             </Typography>
-            <Link href="https://www.facebook.com/" color="inherit">
-              <Facebook />
-            </Link>
-            <Link
-              href="https://www.instagram.com/"
-              color="inherit"
-              sx={{ pl: 1, pr: 1 }}
-            >
-              <Instagram />
-            </Link>
-            <Link href="https://www.twitter.com/" color="inherit">
-              <Twitter />
-            </Link>
           </Grid>
+          <Grid item md={3}></Grid>
         </Grid>
-        <Box mt={5}>
-          <Typography variant="body2" color="text.secondary" align="center">
+        <Box mt={9}>
+          <Typography variant="body2" align="center">
             {"Copyright © "}
-            <Link color="inherit" href="https://your-website.com/">
-              Your Website
+            <Link color="inherit" href="https://umineko.pl">
+              umineko.pl
             </Link>{" "}
             {new Date().getFullYear()}
-            {"."}
           </Typography>
         </Box>
-      </Container>
     </Box>
   );
 };
