@@ -10,13 +10,21 @@ const Leftbar: FC = () => {
     <Box m={1}>
       <Grid item flexDirection='column' position="fixed">
         <Grid container flexDirection='column'>
-          <LeftbarButton link={'/'} title={'Newsy'} icon={<Newspaper />} />
+          <LeftbarButton 
+            link={'/'} 
+            title={'Newsy'} 
+            icon={<Newspaper />} 
+          />
           <LeftbarButton
             link={'/games'}
             title={'Visual Novelki'}
             icon={<VideogameAsset />}
           />
-          <LeftbarButton link={'/gallery'} title={'Galeria'} icon={<Brush />} />
+          <LeftbarButton 
+            link={'/gallery'} 
+            title={'Galeria'}
+            icon={<Brush />} 
+          />
           <LeftbarButton
             link={'/discord'}
             title={'Discord'}
