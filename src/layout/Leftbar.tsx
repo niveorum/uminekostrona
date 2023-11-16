@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { Grid, Box } from '@mui/material';
 import LeftbarButton from './LeftbarButton';
-import { Brush, Newspaper, VideogameAsset } from '@mui/icons-material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { faGamepad, faNewspaper, faPaintbrush } from '@fortawesome/free-solid-svg-icons';
 
 const Leftbar: FC = () => {
   return (
@@ -13,17 +13,17 @@ const Leftbar: FC = () => {
           <LeftbarButton 
             link={'/'} 
             title={'Newsy'} 
-            icon={<Newspaper />} 
+            icon={<FontAwesomeIcon icon={faNewspaper} />} 
           />
           <LeftbarButton
             link={'/games'}
             title={'Visual Novelki'}
-            icon={<VideogameAsset />}
+            icon={<FontAwesomeIcon icon={faGamepad} />}
           />
           <LeftbarButton 
             link={'/gallery'} 
             title={'Galeria'}
-            icon={<Brush />} 
+            icon={<FontAwesomeIcon icon={faPaintbrush} />} 
           />
           <LeftbarButton
             link={'/discord'}

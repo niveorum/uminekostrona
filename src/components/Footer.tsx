@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
           </Grid>
           <Grid item xs={12} md={3}>
             <Typography variant="h6" align="center">
-              Follow Us
+              Śledź nas
               <div>
               <Link href={linkGithub} color="inherit">
                 <FontAwesomeIcon icon={faGithub} />
