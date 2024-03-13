@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
         <Grid item md={3}></Grid>
           <Grid item xs={12} md={3}>
             <Typography variant="h6" align="center">
-              <img width={215} style={{margin: 'auto'}} src={"/umilogo.png"}/>
+              <img width={215} style={{margin: 'auto'}} src={process.env.PUBLIC_URL + "/umilogo.png"}/>
             </Typography>
           </Grid>
           <Grid item xs={12} md={3}>
