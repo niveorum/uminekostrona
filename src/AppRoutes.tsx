@@ -23,7 +23,7 @@ export const AppRoutes: FC = () => {
             )}/>}/>
             <Route path='games' element={<VisualNovelGrid/>}/>
             <Route path='games/:game' element={<VisualNovelPost/>}/>
-            <Route path='gallery' element={<img src='/cycebeatrice.jpg'/>}/>
+            <Route path='gallery' element={<img src={process.env.PUBLIC_URL + '/cycebeatrice.jpg'}/>}/>
             <Route path='discord' element={<DiscordLink/>}/>
           </Route>
         </Routes>
