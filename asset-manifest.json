@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/uminekostrona/static/css/main.7e31f1be.css",
-    "main.js": "/uminekostrona/static/js/main.ea4b9cb1.js",
+    "main.js": "/uminekostrona/static/js/main.edefd454.js",
     "static/media/background.webp": "/uminekostrona/static/media/background.dcefbc0f6611381109da.webp",
     "index.html": "/uminekostrona/index.html",
     "main.7e31f1be.css.map": "/uminekostrona/static/css/main.7e31f1be.css.map",
-    "main.ea4b9cb1.js.map": "/uminekostrona/static/js/main.ea4b9cb1.js.map"
+    "main.edefd454.js.map": "/uminekostrona/static/js/main.edefd454.js.map"
   },
   "entrypoints": [
     "static/css/main.7e31f1be.css",
-    "static/js/main.ea4b9cb1.js"
+    "static/js/main.edefd454.js"
   ]
 }
