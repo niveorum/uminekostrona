@@ -1,64 +1,66 @@
 import { FC } from 'react';
-import { Typography, Grid } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import { Link } from 'react-router-dom';
 
-const styleItem = {
-  backgroundColor: "#00000075",
-  color: "#ffffff",
-  width: "100%",
-  border: 1,
-  borderColor: '#00000000',
-  borderRadius: 8,
-  '&:hover': {
-      borderRadius: 8,
-      border: 1,
-      borderColor: '#ffffff',
-   },
-}
-
-const VisualNovelItemTitle: FC <VisualNovelItemProp> = (props) => {
-  return(
-      <Grid container justifyContent="center">
-          <Grid item>
-              <Typography variant="h5">
-                  {props.displayTitle}
-              </Typography>
-          </Grid>
-      </Grid>
-  )
-}
-
-interface VisualNovelItemProp{
-  title:string;
-  displayTitle:string;
-  summary:string;
-  imageFileName:string
-}
-
-const VisualNovelItem: FC <VisualNovelItemProp> = (props) => {
+const VisualNovelItem: FC<VisualNovelItemProp> = ({ title, displayTitle, summary, imageFileName }) => {
   return (
-    <Link to={props.title} style={{ textDecoration: 'none' }}>
-      <Card sx={styleItem}>
-        <CardHeader
-          title={<VisualNovelItemTitle {...props}/>}
-        />
+    <Link to={title} style={{ textDecoration: 'none' }}>
+      <Card elevation={0} sx={{
+        backgroundColor: 'rgba(6, 2, 10, 0.85)',
+        color: '#f0e8d5',
+        width: '100%',
+        border: '1px solid',
+        borderColor: 'rgba(201, 168, 76, 0.15)',
+        borderRadius: 2,
+        backdropFilter: 'blur(4px)',
+        transition: 'all 0.25s ease',
+        '&:hover': {
+          borderColor: 'rgba(201, 168, 76, 0.6)',
+          boxShadow: '0 0 22px rgba(201, 168, 76, 0.1), 0 6px 24px rgba(0,0,0,0.5)',
+          transform: 'translateY(-3px)',
+        },
+      }}>
+        <CardHeader title={
+          <Typography sx={{
+            fontFamily: '"IM Fell English", serif',
+            color: '#f0e8d5',
+            textAlign: 'center',
+            fontSize: '1.2rem',
+          }}>
+            {displayTitle}
+          </Typography>
+        } />
         <CardMedia
           component="img"
           height="194"
-          width="150"
-          image={props.imageFileName}
+          image={`/${imageFileName}`}
+          alt={displayTitle}
+          sx={{ objectFit: 'cover' }}
         />
         <CardContent>
-          <Typography >
-              {props.summary}
+          <Typography sx={{
+            color: 'rgba(240, 232, 213, 0.7)',
+            fontFamily: '"Crimson Text", serif',
+            fontSize: '1rem',
+            lineHeight: 1.6,
+          }}>
+            {summary}
           </Typography>
         </CardContent>
       </Card>
     </Link>
   );
+};
+
+interface VisualNovelItemProp {
+  title: string;
+  displayTitle: string;
+  summary: string;
+  imageFileName: string;
 }
-export default VisualNovelItem
+
+export default VisualNovelItem;

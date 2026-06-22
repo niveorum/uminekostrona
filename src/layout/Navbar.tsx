@@ -1,23 +1,32 @@
 import { FC } from 'react';
-import { Toolbar, Grid } from '@mui/material'
-
-const style_toolbar = {
-    backgroundColor: "#00000000",
-    display: "flex",
-    justifyContent:"space-between",
-    whiteSpace: "nowrap",
-    marginTop: '5px'
-}
+import { Box } from '@mui/material';
 
 const Navbar: FC = () => {
-    return(
-    <Grid container position="fixed" zIndex={10000}>
-        <Grid item xs={12} position="sticky">
-            <Toolbar sx={{...style_toolbar}}>
-                <img width={215} style={{margin: 'auto'}} src="/umilogo.png"/>
-            </Toolbar>
-        </Grid>
-    </Grid>
-    );
-}
+  return (
+    <Box
+      position="fixed"
+      width="100%"
+      zIndex={10000}
+      sx={{
+        backgroundColor: 'rgba(4, 1, 8, 0.92)',
+        borderBottom: '1px solid rgba(201, 168, 76, 0.3)',
+        backdropFilter: 'blur(12px)',
+        display: 'flex',
+        justifyContent: 'center',
+        py: 0.75,
+      }}
+    >
+      <img
+        width={215}
+        src="/umilogo.png"
+        alt="Umineko"
+        style={{
+          display: 'block',
+          filter: 'drop-shadow(0 0 10px rgba(201, 168, 76, 0.3))',
+        }}
+      />
+    </Box>
+  );
+};
+
 export default Navbar;

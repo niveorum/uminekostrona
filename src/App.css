@@ -1,27 +1,22 @@
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url(/background.webp);
+  background-image:
+    linear-gradient(rgba(4, 1, 8, 0.72), rgba(4, 1, 8, 0.72)),
+    url(/background.webp);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  margin: 0;
-  padding: 0;
   scrollbar-width: none;
 }
 
-/* WebKit (Chrome, Safari) */
 body::-webkit-scrollbar {
   width: 0;
 }
 
-/* WebKit (Chrome, Safari) thumb */
 body::-webkit-scrollbar-thumb {
   background: transparent;
 }
 
-/* WebKit (Chrome, Safari) track */
 body::-webkit-scrollbar-track {
   background: transparent;
 }
-
